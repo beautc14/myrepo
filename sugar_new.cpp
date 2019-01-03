@@ -3,7 +3,10 @@
 
 void sugar_f (int input) {
 	int ans = 0;
-	if (input>5 && ((input%5==1)||(input%5==2)||(input%5==4))) {
+	if ((input==1)||(input==2)||(input==4)) {
+		printf ("-1");
+	}
+	else if (input>5 && ((input%5==1)||(input%5==2)||(input%5==4))) {
 		int divider = input/5;
 		int remainder = input%5;
 		while (divider!=0) {
@@ -14,14 +17,11 @@ void sugar_f (int input) {
 				printf ("%d",ans);
 				break;
 			}
-			else if (remainder == input) {
+			else if (divider==0) {
 				printf ("-1");
 				break;
 			}
 		}
-	}
-	else if (input=(1||2||4)) {
-		printf ("-1");
 	}
 	else if (input%5==3) {
 		ans = input/5+1;
