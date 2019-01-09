@@ -36,5 +36,6 @@ int main (void) {
 	int N;
 	scanf ("%d",&N);
 	sugar_f (N);
+	printf ("press any key to continue..");
 	return 0;
 }
